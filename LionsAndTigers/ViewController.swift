@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -23,9 +24,9 @@ class ViewController: UIViewController {
         
         var myTiger = Tiger()
         myTiger.name = "tigger"
-        myTiger.age = 3
+        //myTiger.age = 3
         myTiger.breed = "Bengel"
-        myTiger.image = UIImage(named: "BengelTiger.jpg")
+        myTiger.image = UIImage(named: "BengalTiger.jpg")
         
         println("My tiger name is \(myTiger.name), its' age is \(myTiger.age), its' breed is \(myTiger.breed), and its' image is \(myTiger.image)")
     
@@ -52,11 +53,13 @@ class ViewController: UIViewController {
         forthTiger.age = 3
         forthTiger.breed = "Siberian Tiger"
         thirdTiger.image = UIImage(named: "SiberianTiger.jpg")
-    
+        
         
         myTigers += [secondTiger, thirdTiger, forthTiger]
+       
     }
-   
+    
+    
     
     
     override func didReceiveMemoryWarning() {

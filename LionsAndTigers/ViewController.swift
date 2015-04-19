@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         forthTiger.name = "Spar"
         forthTiger.age = 1
         forthTiger.breed = "Siberian Tiger"
-        forthteTiger.image = UIImage(named: "SiberianTiger.jpg")
+        forthTiger.image = UIImage(named: "SiberianTiger.jpg")
         
         myTigers += [secondTiger, thirdTiger, forthTiger]
     
@@ -76,6 +76,9 @@ class ViewController: UIViewController {
         nameLabel.text = tiger.name
         ageLabel.text = "\(tiger.age)"
         breedLabel.text = tiger.breed
+        
+        
+        
     }
 
 }

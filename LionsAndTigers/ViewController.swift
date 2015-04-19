@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -35,6 +34,8 @@ class ViewController: UIViewController {
         ageLabel.text = "\(myTiger.age)"
         breedLabel.text = myTiger.breed
         
+        myTigers.append(myTiger)
+        
         var secondTiger = Tiger()
         secondTiger.name = "Tigress"
         secondTiger.age = 2
@@ -47,18 +48,16 @@ class ViewController: UIViewController {
         thirdTiger.breed = "Malaysan Tiger"
         thirdTiger.image = UIImage(named: "MalayanTiger.jpg")
         
-        
         var forthTiger = Tiger()
         forthTiger.name = "Spar"
-        forthTiger.age = 3
+        forthTiger.age = 1
         forthTiger.breed = "Siberian Tiger"
-        thirdTiger.image = UIImage(named: "SiberianTiger.jpg")
-        
+        forthteTiger.image = UIImage(named: "SiberianTiger.jpg")
         
         myTigers += [secondTiger, thirdTiger, forthTiger]
-       
-    }
     
+ 
+    }
     
     
     
@@ -68,7 +67,16 @@ class ViewController: UIViewController {
     }
 
     
-    @IBOutlet weak var nextBarButtonItemPressed: UIBarButtonItem!
+    @IBAction func nextBarButtonItemPressed(sender: UIBarButtonItem) {
+ 
+        let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        let tiger = myTigers[randomIndex]
+        
+        myImageView.image = tiger.image
+        nameLabel.text = tiger.name
+        ageLabel.text = "\(tiger.age)"
+        breedLabel.text = tiger.breed
+    }
 
 }
 

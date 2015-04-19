@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         var myTiger = Tiger()
         myTiger.name = "tigger"
-        //myTiger.age = 3
+        myTiger.age = 3
         myTiger.breed = "Bengel"
         myTiger.image = UIImage(named: "BengalTiger.jpg")
         
